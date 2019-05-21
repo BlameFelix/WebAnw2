@@ -1,3 +1,7 @@
+package de.he;
+
+import de.he.Article;
+
 import javax.ws.rs.Path;
 
 @Path("/cpu")
