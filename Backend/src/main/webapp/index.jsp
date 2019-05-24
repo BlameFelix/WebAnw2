@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tobi ist Schwuuuuul</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
     <!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen" /> -->
     <!-- Das neueste kompilierte und minimierte CSS
@@ -132,7 +134,7 @@
     <div class="col-lg-4">
         <img class="img-circle" src="Pictures/paypal-784404_1280.png" alt="Generisches Platzhalter-Bild" width="auto" height="140">
         <h2>Paypal</h2>
-        <p>Bezahlen Sie blitzschnell und bequem mit Paypal. Außerdem haben Sie den Paypal käuferschutz für zusätzliche Sicherheit. Paypal ist außerdem völlig kostenlos und sicher.</p>
+        <p>Bezahlen Sie blitzschnell und bequem mit Paypal. Außerdem haben Sie den Paypal Käuferschutz für zusätzliche Sicherheit. Paypal ist außerdem völlig kostenlos und sicher.</p>
         <p><a class="btn btn-default" href="https://paypal.com" role="button">Erfahren Sie mehr &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">

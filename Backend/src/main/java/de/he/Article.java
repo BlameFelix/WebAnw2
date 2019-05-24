@@ -1,14 +1,20 @@
 package de.he;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
 
 public class Article {
-    private float price;
-    private int artNr;
-    private String manufact;
-    private String artName;
-    private int count;
+    protected float price;
+    protected int artNr;
+    protected String manufact;
+    protected String artName;
+    protected int artCount;
+
+    public int getArtCount() {
+        return artCount;
+    }
+
+    public void setArtCount(int artCount) {
+        this.artCount = artCount;
+    }
 
     public float getPrice() {
         return price;
@@ -40,13 +46,5 @@ public class Article {
 
     public void setArtName(String artName) {
         this.artName = artName;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 }

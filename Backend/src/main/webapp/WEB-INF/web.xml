@@ -13,7 +13,7 @@
     </init-param>
     <init-param>
       <param-name>jersey.config.servlet.filter.staticContentRegex</param-name>
-      <param-value>../../resources/.*</param-value>
+      <param-value>../resources/.*</param-value>
     </init-param>
     <init-param>
       <param-name>jersey.config.servlet.filter.forwardOn404</param-name>
@@ -23,7 +23,7 @@
 
   <filter-mapping>
     <filter-name>Jersey</filter-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/tes/*</url-pattern>
   </filter-mapping>
 
 </web-app>
