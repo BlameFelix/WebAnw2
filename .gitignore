@@ -2,23 +2,23 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+Backend/.idea/**/workspace.xml
+Backend/.idea/**/tasks.xml
+Backend/.idea/**/usage.statistics.xml
+Backend/.idea/**/dictionaries
+Backend/.idea/**/shelf
 
 # Generated files
-.idea/**/contentModel.xml
+Backend/.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
+Backend/.idea/**/dataSources/
+Backend/.idea/**/dataSources.ids
+Backend/.idea/**/dataSources.local.xml
+Backend/.idea/**/sqlDataSources.xml
+Backend/.idea/**/dynamic.xml
+Backend/.idea/**/uiDesigner.xml
+Backend/.idea/**/dbnavigator.xml
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -29,11 +29,15 @@
 # .idea/modules
 
 # IntelliJ
-out/
+Backend/out/
 
 # Editor-based Rest Client
-.idea/httpRequests
+Backend/.idea/httpRequests
 
-# local deployed files
-Backend_deployed
+Backend/target
 
+Backend/\.idea/artifacts/
+
+Backend/\.idea/libraries/
+
+Backend/\.idea/runConfigurations/Tomcat_8_5_41\.xml
