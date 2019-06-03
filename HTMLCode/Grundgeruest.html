@@ -17,7 +17,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <script src="../Frontend/src/Frontend.js"></script>
+<!--     
+<script>
+    function sendXHR(){
+        var xhr;
+        if (window.XMLHttpRequest){
+            xhr=new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject){
+            xhr = new ActiveXObject('MSXML2.XMLHTTP');
+        }
+        else{
+            return false;
+        }
+        xhr.onreadystatechange = xhrReadyStateHandler();
+        xhr.open("GET",str(requestedURL),true);
+        xhr.send(null);
+    }
+
+    xhr.onReadyStatHandler(){
+
+        if(xhr.readyState != 4){
+            console.log(xhr.responseText);
+        }
+
+        //Server-answer is come true
+        if (xhr.responseCode == 200){
+            document.getElementById("Target").innerHTML = xhr.responseText;
+        }
+
+        else{
+            alert("Es ist ein Fehler beim Laden aufgetreten:\n"+xhr.responseCode);
+        }
+    }
+    
+    
+</script>
+-->
+
+<!--Export the script into an extra file-->
+    
+<script src="../Frontend/src/Frontend.js"></script>
+
 
 </head>
 <body>	
@@ -46,6 +87,8 @@
 <!-- !Header -->
     
 <!-- Navbar -->
+
+    
 <nav class="navbar navbar-expand-sm sticky-top primary-color topnav">
   <ul class="navbar-nav">
     <li class="nav-item">
@@ -84,10 +127,10 @@
     </div>
 </div>
 
-    
-    
-    
-<!-- Footer -->
+Navbar ending-->
+
+<!--footer-->    
+      
 <footer class="page-footer font-small blue pt-4 primary-color">
 
   <!-- Footer Links -->
