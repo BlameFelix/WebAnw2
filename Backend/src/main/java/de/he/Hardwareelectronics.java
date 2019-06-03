@@ -32,12 +32,25 @@ public class Hardwareelectronics {
     }
 
     @GET
+    @Path("Cpudetail")
+    // Tell Jersey we want to return JSON
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response cpuJSON() throws Exception {
+        Vector<CPU> cpus = getAllCpus();   //Method should return selected Cpu!
+
+        // By setting our Vector<EntryModel> into the entity method
+        // Jersey now tries to convert our POJO (Plain Old Java Object) into JSON
+        //return Response.status(200).entity(cpus).build();
+        return Response.status(Response.Status.OK).entity(cpus).build();
+    }
+
+    @GET
     @Path("cpus")
     // Tell Jersey we want to return JSON
     @Produces(MediaType.APPLICATION_JSON)
     public Response cpusJSON() throws Exception {
-        Vector<CPU> cpus = getAllCpus();   //Activate when Joels method is ready to return vector
-        //CPU cpus = getAllCpus();
+        Vector<CPU> cpus = getAllCpus();   //Method should return all Cpus we offer!
+
         // By setting our Vector<EntryModel> into the entity method
         // Jersey now tries to convert our POJO (Plain Old Java Object) into JSON
         //return Response.status(200).entity(cpus).build();
