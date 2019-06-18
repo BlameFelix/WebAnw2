@@ -66,74 +66,61 @@
     </ul>
 </nav>
 <!-- !Navbar -->
-    
+
 <div class="platzhalter"></div>
 <!--Table -->
-   
+
 <div class="container">
-    <h2>Ihr Einkaufswagen</h2> 
+    <h2>Ihr Einkaufswagen</h2>
     <div class="platzhalter"></div>
     <table class="table table-striped">
         <thead>
-            <tr>
-                <th>Position</th>
-                <th>Produkt</th>
-                <th>Stückzahl</th>
-                <th>Preis</th>
-            </tr>
+        <tr>
+            <th>Position</th>
+            <th>Produkt</th>
+            <th>Stückzahl</th>
+            <th>Preis</th>
+        </tr>
         </thead>
-        
-        <tr>
-                <td>1</td>
-                <td>Grafikkarte</td>
-                <td>2</td>
-                <td>200€</td>
-        </tr>
-        
-        <tr>
-                <td>1</td>
-                <td>Grafikkarte</td>
-                <td>2</td>
-                <td>200€</td>
-        </tr>
-        
-        <tr>
-                <td>1</td>
-                <td>Grafikkarte</td>
-                <td>2</td>
-                <td>200€</td>
-          </tr>
-  </table>
-</div>    
-    <br><br>
-    
 
-<!-- Table-->    
+        <tr>
+            <td id="position"></td>
+            <td id="produkt"></td>
+            <td id="count"></td>
+            <td id="price"></td>
+        </tr>
+
+    </table>
+</div>
+<br><br>
+
+
+<!-- Table-->
 <div class="platzhalter"></div>
-<!--Payment and delivery adress-->    
-    
+<!--Payment and delivery adress-->
+
 <div class="container">
-    
-    
-<!--Payment-->    
+
+
+    <!--Payment-->
     <h2>Angaben</h2>
     <div class="platzhalter"></div>
 
-    
-    <form class="form-horizontal" action="/action_page.php">
-        
 
-        
+    <form class="form-horizontal" action="/action_page.php">
+
+
+
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email:</label>
             <div class="col-sm-10">
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
             </div>
         </div>
-        
+
         <div class="form-group">
             <label class="control-label col-sm-2" for="pwd">Password:</label>
-            <div class="col-sm-10">          
+            <div class="col-sm-10">
                 <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
             </div>
         </div>
@@ -143,22 +130,22 @@
             <div class="col-sm-10">
                 <input type="input" class="form-control" placeholder="Name" name="email">
             </div>
-        </div>        
-        
+        </div>
+
         <div class="form-group">
             <label class="control-label col-sm-2" >Lieferadresse:</label>
             <div class="col-sm-10">
                 <input type="input" class="form-control" placeholder="Lieferadresse" name="email">
             </div>
         </div>
-        
+
         <div class="form-group">
             <label class="control-label col-sm-2" >Ort:</label>
             <div class="col-sm-10">
                 <input type="input" class="form-control" placeholder="Ort" name="email">
             </div>
-        </div>        
-        
+        </div>
+
         <div class="form-group">
             <label class="control-label col-sm-2" >Bezahloption</label>
             <select class="form-control col-sm-10">
@@ -168,102 +155,136 @@
                 <option>Bitcoin</option>
             </select>
         </div>
-        
-        <div class="form-group">        
+
+        <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                     <label><input type="checkbox" name="remember">Email und Passwort merken</label>
                 </div>
             </div>
         </div>
-    
-        <div class="form-group">        
+
+        <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default">Bestätigung</button>
             </div>
         </div>
     </form>
 </div>
-<!--Payment-->    
-     
+<!--Payment-->
+
 <hr class="featurette-divider">
-        
-<!--Payment and delivery adress-->        
-    
+
+<!--Payment and delivery adress-->
+
 <!-- Footer -->
 <footer class="page-footer font-small blue pt-4 primary-color">
 
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
 
-    <!-- Grid row -->
-    <div class="row">
+        <!-- Grid row -->
+        <div class="row">
 
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
 
-        <!-- Content -->
-        <h5 class="text-uppercase">Hardware Electronics</h5>
-        <p>Besuchen Sie auch unsere social Media Seiten.</p>
+                <!-- Content -->
+                <h5 class="text-uppercase">Hardware Electronics</h5>
+                <p>Besuchen Sie auch unsere social Media Seiten.</p>
 
-      </div>
-      <!-- Grid column -->
+            </div>
+            <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none pb-3">
+            <hr class="clearfix w-100 d-md-none pb-3">
 
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
 
-          <!-- Links -->
-          <h5 class="text-uppercase">Social Media</h5>
+                <!-- Links -->
+                <h5 class="text-uppercase">Social Media</h5>
 
-          <ul class="list-unstyled">
-            <li>
-              <a href="http://www.facebook.de">Facebook</a>
-            </li>
-            <li>
-              <a href="http://www.Twitter.de">Twitter</a>
-            </li>
-            <li>
-              <a href="http://www.instagram.de">Instagram</a>
-            </li>
-          </ul>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.facebook.de">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="http://www.Twitter.de">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="http://www.instagram.de">Instagram</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Über uns</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.google.de">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="http://www.google.de">Datenschutzerklärung</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
 
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-          <!-- Links -->
-          <h5 class="text-uppercase">Über uns</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="http://www.google.de">Impressum</a>
-            </li>
-            <li>
-              <a href="http://www.google.de">Datenschutzerklärung</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
+        <!-- Grid row -->
 
     </div>
-    <!-- Grid row -->
+    <!-- Footer Links -->
 
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3 sec-color">© 2018 Copyright:
-    <a href="http://google.de"> HardwareElectronics.com</a>
-  </div>
-  <!-- Copyright -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 sec-color">© 2018 Copyright:
+        <a href="http://google.de"> HardwareElectronics.com</a>
+    </div>
+    <!-- Copyright -->
 
 </footer>
 <!-- Footer -->
-  
+
 </body>
+
+<script>
+    /*$(document).ready(function() {
+        $.ajax({
+            url: "cart",
+            method: "GET",
+            dataType: "json"
+        })
+            .done(function(response) {
+                var i;
+                for(i=0; i<response.length; i++) {
+                    document.getElementById("position").innerHTML = i.toString();
+                    $("#produkt").text(JSON.stringify(response.ArtNr));
+                    $("#count").text(JSON.stringify(response.Count));
+                    document.getElementById("price").innerHTML = "150€";
+                }
+            })
+    }
+    $(onDocumentReady);
+
+    function onDocumentReady() {
+        load();
+        cart();
+    }
+    function load() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var value = urlParams.get('article');
+        console.log(value);
+        $.ajax({
+            url: "cpus/setsession",
+            method: "GET",
+            dataType: "json"
+        })*/
+</script>
 </html>
