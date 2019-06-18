@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <%@ page contentType="text/html; charset=UTF-8" %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tobias ist Schwuuuuul</title>
+    <title>Card</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
     <!-- Das neueste kompilierte und minimierte CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -85,7 +85,7 @@
 
         <tr>
             <td id="position"></td>
-            <td id="produkt"></td>
+            <td id="product"></td>
             <td id="count"></td>
             <td id="price"></td>
         </tr>
@@ -106,49 +106,45 @@
     <h2>Angaben</h2>
     <div class="platzhalter"></div>
 
-
-    <form class="form-horizontal" action="/action_page.php">
-
-
-
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email:</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                <input id="Email" type="email" class="form-control" placeholder="Email" name="email">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <label class="control-label col-sm-2">Firstname:</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                <input id ="Firstname" type="input" class="form-control" placeholder="Firstname" name="email">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-sm-2">Name:</label>
+            <label class="control-label col-sm-2">Lastname:</label>
             <div class="col-sm-10">
-                <input type="input" class="form-control" placeholder="Name" name="email">
+                <input id ="Lastname" type="input" class="form-control" placeholder="Lastname" name="email">
             </div>
         </div>
 
+
         <div class="form-group">
-            <label class="control-label col-sm-2" >Lieferadresse:</label>
+            <label class="control-label col-sm-2" >Address:</label>
             <div class="col-sm-10">
-                <input type="input" class="form-control" placeholder="Lieferadresse" name="email">
+                <input id ="Address" type="input" class="form-control" placeholder="Address" name="email">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-sm-2" >Ort:</label>
+            <label class="control-label col-sm-2" >City:</label>
             <div class="col-sm-10">
-                <input type="input" class="form-control" placeholder="Ort" name="email">
+                <input id ="City" type="input" class="form-control" placeholder="City" name="email">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-sm-2" >Bezahloption</label>
-            <select class="form-control col-sm-10">
+            <label class="control-label col-sm-2" >Payment</label>
+            <select id ="Payment" class="form-control col-sm-10">
                 <option>Paypal</option>
                 <option>VISA</option>
                 <option>Master</option>
@@ -166,10 +162,9 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Bestätigung</button>
+                <button type="submit" class="btn btn-default" onclick="sub()">Bestellen</button>
             </div>
         </div>
-    </form>
 </div>
 <!--Payment-->
 
@@ -255,36 +250,52 @@
 </body>
 
 <script>
-    /*$(document).ready(function() {
-        $.ajax({
-            url: "cart",
-            method: "GET",
-            dataType: "json"
-        })
-            .done(function(response) {
-                var i;
-                for(i=0; i<response.length; i++) {
-                    document.getElementById("position").innerHTML = i.toString();
-                    $("#produkt").text(JSON.stringify(response.ArtNr));
-                    $("#count").text(JSON.stringify(response.Count));
-                    document.getElementById("price").innerHTML = "150€";
-                }
-            })
-    }
     $(onDocumentReady);
 
     function onDocumentReady() {
         load();
-        cart();
+        //cart();
     }
     function load() {
-        var urlParams = new URLSearchParams(window.location.search);
-        var value = urlParams.get('article');
-        console.log(value);
-        $.ajax({
-            url: "cpus/setsession",
-            method: "GET",
-            dataType: "json"
-        })*/
+                console.log(response);
+                x=document.getElementsByClassName("label");  // Find the elements
+                for(var i = 0; i < x.length; i++){
+                    x[i].innerText=JSON.stringify(response.manufact + " " + response.artName);    // Change the content
+                }
+                $("#price").text(JSON.stringify("Preis: " + response.price + "€"));
+                $("#threads").text(JSON.stringify(response.core + "/" + response.threads));
+                $("#frequency").text(JSON.stringify(response.frequency + "/" + response.turbo));
+                $("#socket").text(JSON.stringify(response.socket));
+                $("#tdp").text(JSON.stringify(response.tdp));
+                $("#stock").text(JSON.stringify(response.artCount + " Stück auf Lager"))
+            })
+            .fail(function(jqXHR, statusText, error) {
+                var errorMsg = "Response Code: " + jqXHR.status + " - Fehlermeldung: " + jqXHR.responseText;
+                console.log(errorMsg);
+                $("#ziel").text("Es ist ein Fehler aufgetreten");
+            });
+    }
+
+    function sub() {
+        var email = document.getElementById("Email").value;
+        var fn = document.getElementById("Firstname").value;
+        var ln = document.getElementById("Lastname").value;
+        var addr = document.getElementById("Address").value;
+        var city= document.getElementById("City").value;
+        var paym = document.getElementById("Payment").text;
+
+        var customer = {
+            pemail: email,
+            pfn: fn,
+            pln: ln,
+            paddr: addr,
+            pcity: city
+        };
+
+        $.post("addcustomer", customer);
+
+    };
+
+
 </script>
 </html>

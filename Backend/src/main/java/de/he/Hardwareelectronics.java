@@ -37,6 +37,14 @@ public class Hardwareelectronics {
         return session;
     }
 
+    @POST
+    @Path("addcustomer")
+    public Viewable customer(@FormParam("pemail") String email, @FormParam("pfn") String fn, @FormParam("pln") String ln, @FormParam("paddr") String addr, @FormParam("pcity") String city) {
+        System.out.println("homo");
+        CustomerData c = new CustomerData(email, fn, ln, addr, city);
+        return new Viewable("/index.jsp");
+    }
+
     @GET
     public Viewable Template() throws Exception {
         session = request.getSession(true);

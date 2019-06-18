@@ -2,7 +2,6 @@ package de.he;
 
 public class CustomerData {
 
-    protected int CNR;
     protected String Email;
     protected String firstname;
     protected String lastname;
@@ -10,17 +9,13 @@ public class CustomerData {
     protected String city;
 
 
-    public CustomerData(int CNR, String Email, String firstname, String lastname, String adress, String city) {
-        this.CNR = CNR;
+    public CustomerData(String Email, String firstname, String lastname, String adress, String city) {
         this.Email = Email;
         this.firstname = firstname;
         this.lastname = lastname;
         this.adress = adress;
         this.city = city;
     }
-    public int getCNR () { return CNR; }
-
-    public void setCNR ( int CNR) { this.CNR = CNR; }
 
     public String getEmail() { return Email; }
 
