@@ -83,7 +83,7 @@
         </tr>
         </thead>
 
-        <tr>
+        <tr id="copyme">
             <td id="position"></td>
             <td id="product"></td>
             <td id="count"></td>
@@ -258,17 +258,18 @@
         //cart();
     }
     function load() {
-                console.log(response);
-                x=document.getElementsByClassName("label");  // Find the elements
-                for(var i = 0; i < x.length; i++){
-                    x[i].innerText=JSON.stringify(response.manufact + " " + response.artName);    // Change the content
-                }
-                $("#price").text(JSON.stringify("Preis: " + response.price + "€"));
-                $("#threads").text(JSON.stringify(response.core + "/" + response.threads));
-                $("#frequency").text(JSON.stringify(response.frequency + "/" + response.turbo));
-                $("#socket").text(JSON.stringify(response.socket));
-                $("#tdp").text(JSON.stringify(response.tdp));
-                $("#stock").text(JSON.stringify(response.artCount + " Stück auf Lager"))
+                //Hier solltest du jetzt die Daten aus der Session ziehen...
+                // Diese Müssen dann in die formulare mit den entsprechenden Tags geschrieben werden..
+                // Hier noch eine methode um die tabellenzeile so oft wie benötigt zu kopieren:
+                // benötigt noch ein element mit der id pasteme, wo die zeilen reinkopiert werden sollen.. evtl das <table>?
+        var k=0;
+        for .....
+        if (k!=1) {
+            console.log("passt")
+            var itm = document.getElementById("copyMe");
+            var cln = itm.cloneNode(true);
+            document.getElementById("pasteMe").appendChild(cln);
+        }
 
             .fail(function(jqXHR, statusText, error) {
                 var errorMsg = "Response Code: " + jqXHR.status + " - Fehlermeldung: " + jqXHR.responseText;
