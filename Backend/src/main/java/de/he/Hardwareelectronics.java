@@ -5,7 +5,7 @@ import org.glassfish.jersey.server.mvc.Viewable;
 import java.io.Reader;
 import java.util.Vector;
 
-
+import java.net.URI;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.ws.rs.Consumes;
@@ -39,10 +39,16 @@ public class Hardwareelectronics {
 
     @POST
     @Path("addcustomer")
-    public Viewable customer(@FormParam("pemail") String email, @FormParam("pfn") String fn, @FormParam("pln") String ln, @FormParam("paddr") String addr, @FormParam("pcity") String city) {
+    public void customer(@FormParam("pemail") String email, @FormParam("pfn") String fn, @FormParam("pln") String ln, @FormParam("paddr") String addr, @FormParam("pcity") String city) throws Exception {
         System.out.println("homo");
         CustomerData c = new CustomerData(email, fn, ln, addr, city);
-        return new Viewable("/index.jsp");
+        //URI redirectURI = new URI("Order.jsp");
+
+        //Hier kommt jetzt deine tolle Mehode jo el
+        //Brust ist laif
+
+        //return Response.seeOther(redirectURI).build();
+        //return new Viewable("/../Order.jsp");
     }
 
     @GET

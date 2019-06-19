@@ -105,7 +105,7 @@
     <!--Payment-->
     <h2>Angaben</h2>
     <div class="platzhalter"></div>
-
+    <form method="post" action="Order.jsp">
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email:</label>
             <div class="col-sm-10">
@@ -162,9 +162,10 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default" onclick="sub()">Bestellen</button>
+                <button type="submit" class="btn btn-default">Bestellen</button>
             </div>
         </div>
+    </form>
 </div>
 <!--Payment-->
 
@@ -268,7 +269,7 @@
                 $("#socket").text(JSON.stringify(response.socket));
                 $("#tdp").text(JSON.stringify(response.tdp));
                 $("#stock").text(JSON.stringify(response.artCount + " Stück auf Lager"))
-            })
+
             .fail(function(jqXHR, statusText, error) {
                 var errorMsg = "Response Code: " + jqXHR.status + " - Fehlermeldung: " + jqXHR.responseText;
                 console.log(errorMsg);
@@ -276,7 +277,7 @@
             });
     }
 
-    function sub() {
+    /*function sub() {
         var email = document.getElementById("Email").value;
         var fn = document.getElementById("Firstname").value;
         var ln = document.getElementById("Lastname").value;
@@ -294,7 +295,7 @@
 
         $.post("addcustomer", customer);
 
-    };
+    };*/
 
 
 </script>
